@@ -10,17 +10,17 @@ jobs:
   ci:
     name: CI pipeline
     runs-on: ubuntu-latest
-  steps:
-    - name: Git Checkout
-      uses: actions/checkout@v1
+    steps:
+      - name: Git Checkout example
+        uses: actions/checkout@v1
 
-    - name: Set up JDK 17
-      uses: actions/setup-java@c1
-      with:
-        java-version: 17
+      - name: Set up JDK 17
+        uses: actions/setup-java@c1
+        with:
+          java-version: 17
 
-    - name: Run Tests
-      run: ./gradlew test
+      - name: Run Tests
+        run: ./gradlew test
 
 
 
