@@ -23,7 +23,7 @@ jobs:
         run: ./gradlew test
 
       - name: Publish Test Report
-        uses: LeandroMattosTR/action-junit-report@v2
+        uses: mikepenz/action-junit-report@v2
         if: always() #always runs even if the previous one fails
         with:
           report_paths: '**/build/test-results/test/TEST-*.xml'
