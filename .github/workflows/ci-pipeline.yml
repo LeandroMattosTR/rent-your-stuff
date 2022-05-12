@@ -2,7 +2,7 @@ name: CI pipeline
 
 on:
   push:
-    branchs:
+    branches:
       - main
   pull_request:
 
@@ -22,10 +22,8 @@ jobs:
       - name: Run Tests
         run: ./gradlew test
 
-
-
-    - name: Publish Test Report
-      run: LeandroMattosTR/action-junit-report@v2
-      if: always() #always runs even if the previous one fails
-      with:
-        report_paths: '**/build/test-results/test/TEST-*.xml'
+      - name: Publish Test Report
+        run: LeandroMattosTR/action-junit-report@v2
+        if: always() #always runs even if the previous one fails
+        with:
+          report_paths: '**/build/test-results/test/TEST-*.xml'
