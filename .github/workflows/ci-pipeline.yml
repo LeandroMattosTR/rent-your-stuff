@@ -20,7 +20,7 @@ jobs:
         java-version: 17
 
     - name: Run Tests
-      run: ./gradle test
+      run: ./gradlew test
 
 
 
@@ -28,5 +28,4 @@ jobs:
       run: LeandroMattosTR/action-junit-report@v2
       if: always() #always runs even if the previous one fails
       with:
-        report_paths: '**/build/test-results/test/TEST-*.xml
-        '
+        report_paths: '**/build/test-results/test/TEST-*.xml'
