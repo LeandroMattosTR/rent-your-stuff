@@ -10,4 +10,11 @@ class RentYourStuffApplicationTests {
 	void contextLoads() {
 	}
 
+
+	@Test
+	void echoTest() {
+		System.out.println("A simple echo");
+	}
+
+
 }
