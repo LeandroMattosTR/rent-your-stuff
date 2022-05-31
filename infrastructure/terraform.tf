@@ -7,7 +7,7 @@ terraform {
         }
 
         herokux = {
-            source = "davidjj99/herokux"
+            source = "davidji99/herokux"
 
         }
     }
